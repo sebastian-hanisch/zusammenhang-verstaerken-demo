@@ -32,7 +32,7 @@ def test_verdict_design_rows_ratios_gap_and_rounding():
             {"label": "B", "n": 12, "nets": 2, "sum_mst": 20, "sum_opt": 25, "sum_lp": 25.0, "sum_round": 25, "max_round": 1.0, "round_exact": 2, "lp_integral": 2, "max_gap": 1.0}]
     kind, text = ev.verdict_design_rows(rows)
     assert kind == "info"
-    assert text == ("Auf 4 Netzen mit 12 Standorten kostet das Optimum im Mittel das 1,33-Fache des billigsten Spannbaums (je Netztyp 1,25 bis 1,50). Die Lücke zum linearen Programm ist höchstens 1,04 "
+    assert text == ("Auf 4 Netzen mit 12 Standorten kostet das Optimum im Mittel (Quotient der Summen) das 1,33-Fache des billigsten Spannbaums (je Netztyp 1,25 bis 1,50). Die Lücke zum linearen Programm ist höchstens 1,04 "
                     "(Summe der Kosten 40 gegen 39,5), seine Lösung ist in 3 von 4 Netzen ganzzahlig. Iteratives Runden trifft das Optimum in 3 von 4 Netzen, kostet im Mittel das 1,05-Fache und im schlechtesten Netz "
                     "das 1,20-Fache (A; Garantie 2).")
 
@@ -52,7 +52,7 @@ def test_verdict_double_rows_shares_and_cycles():
             {"label": "B", "n": 12, "nets": 2, "sum_pairs_cand": 1, "sum_all_cand": 101, "sum_pairs_design": 30, "sum_all_design": 60, "design_cycle": 0}]
     kind, text = ev.verdict_double_rows(rows)
     assert kind == "info"
-    assert text == ("Im ganzen Kandidatennetz trennen 1 % aller Leitungspaare das Netz, im billigsten Entwurf 50 % (über 4 Netze): Redundanz zum kleinsten Preis ist verwundbarer. "
+    assert text == ("Im ganzen Kandidatennetz trennen 1 % aller Leitungspaare das Netz, im billigsten Entwurf 50 % (über 4 Netze): Der Entwurf hat weniger Leitungen und ist verwundbarer; ob die Kostenminimierung die Ursache ist, misst der Vergleich nicht. "
                     "In 1 von 4 Netzen ist der Entwurf ein einziger Kreis über alle Standorte (dann trennt jedes Paar).")
 
 

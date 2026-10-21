@@ -79,8 +79,8 @@ st.markdown(
 und man verbindet seine **Blätter** paarweise) und **Entwerfen** (aus Kandidatenleitungen mit Kosten die billigste Auswahl treffen, die brückenfrei verbindet; NP-schwer). Für das Entwerfen rechnet die Demo ein **lineares Programm**
 mit **nachgeladenen Schnittbedingungen**, **rundet iterativ** (Garantie 2) und vergleicht mit der **exakten** Lösung.
 
-Auffällig: Das Verstärken ist **einfach** (⌈L/2⌉ neue Leitungen bei L Blättern, aber die Wahl der Vertreter ist heikel); beim Entwerfen ist das **lineare Programm fast ganzzahlig**; und das billigste Teilnetz ist **verwundbarer** als das Kandidatennetz:
-Es ist oft ein einziger Kreis, in dem **jedes** Paar von Leitungen das Netz trennt (Tab Doppelausfälle).
+Auffällig: Das Verstärken ist **einfach** (⌈L/2⌉ neue Leitungen bei L Blättern, aber die Wahl der Vertreter ist heikel); beim Entwerfen hat das **lineare Programm** bei 12 Standorten in den meisten Netzen eine **ganzzahlige** Lösung (je nach Ecke in 47 bis 51 von 56); und das billigste Teilnetz ist **verwundbarer** als das Kandidatennetz, auch weil es weniger Leitungen hat:
+Auf den Modellnetzen ist es in rund 40 bis 50 % der Fälle ein einziger Kreis, in dem **jedes** Paar von Leitungen das Netz trennt (Tab Doppelausfälle).
 
 Das ist das vierte Stück der Reihe **Schnitte und Zusammenhang**; Brücken zählt **bridges-demo**, Zusammenhang über disjunkte Wege zeigt **menger-demo**, Schnittbedingungen für **Flusskapazitäten** nachzuladen zeigt **fixkosten-netzdesign-demo**.
 Weiter unten: die Experimente **🔬**, **🚧 Wo die Annahmen enden** und der Expander **📐 Mathematische Formulierung**.

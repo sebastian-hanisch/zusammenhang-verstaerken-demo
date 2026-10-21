@@ -277,7 +277,7 @@ def verdict_design_rows(rows):
     hit = sum(r["round_exact"] for r in rows)
     integral = sum(r["lp_integral"] for r in rows)
     ratios = [r["sum_opt"] / r["sum_mst"] for r in rows]
-    text = (f"Auf {_i(nets)} Netzen mit {_i(rows[0]['n'])} Standorten kostet das Optimum im Mittel das {_r(opt / mst)}-Fache des billigsten Spannbaums (je Netztyp {_r(min(ratios))} bis {_r(max(ratios))}). "
+    text = (f"Auf {_i(nets)} Netzen mit {_i(rows[0]['n'])} Standorten kostet das Optimum im Mittel (Quotient der Summen) das {_r(opt / mst)}-Fache des billigsten Spannbaums (je Netztyp {_r(min(ratios))} bis {_r(max(ratios))}). "
             f"Die Lücke zum linearen Programm ist höchstens {_r(gap)} (Summe der Kosten {_i(opt)} gegen {_dec(lp, 1)}), seine Lösung ist in {_of(integral, nets)} Netzen ganzzahlig. Iteratives Runden trifft das Optimum in "
             f"{_of(hit, nets)} Netzen, kostet im Mittel das {_r(rd / opt)}-Fache und im schlechtesten Netz das {_r(worst['max_round'])}-Fache ({worst['label']}; Garantie 2).")
     return "info", text
@@ -298,5 +298,5 @@ def verdict_double_rows(rows):
     pc, ac = sum(r["sum_pairs_cand"] for r in rows), sum(r["sum_all_cand"] for r in rows)
     pd, ad = sum(r["sum_pairs_design"] for r in rows), sum(r["sum_all_design"] for r in rows)
     cyc = sum(r["design_cycle"] for r in rows)
-    return "info", (f"Im ganzen Kandidatennetz trennen {_share(pc / ac)} % aller Leitungspaare das Netz, im billigsten Entwurf {_share(pd / ad)} % (über {_i(nets)} Netze): Redundanz zum kleinsten Preis ist verwundbarer. "
+    return "info", (f"Im ganzen Kandidatennetz trennen {_share(pc / ac)} % aller Leitungspaare das Netz, im billigsten Entwurf {_share(pd / ad)} % (über {_i(nets)} Netze): Der Entwurf hat weniger Leitungen und ist verwundbarer; ob die Kostenminimierung die Ursache ist, misst der Vergleich nicht. "
                     f"In {_of(cyc, nets)} Netzen ist der Entwurf ein einziger Kreis über alle Standorte (dann trennt jedes Paar).")
