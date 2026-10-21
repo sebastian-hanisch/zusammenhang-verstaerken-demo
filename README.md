@@ -1,7 +1,6 @@
 # Zusammenhang verstärken und Netze entwerfen – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-zusammenhang-verstaerken-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-zusammenhang-verstaerken-demo.streamlit.app/)**
 
 Viertes Stück der Reihe **Schnitte und Zusammenhang** (Arbeitstitel der Linie `schnitte-zusammenhang`) in der „Konzepte“-Reihe für die Website „Sebastian Hanisch – Operations Research und Machine Learning“, Bereich Graphentheorie. Vehikel: ein **Verbindungsnetz zwischen Standorten** (Depots, Umschlagpunkte, Werke), synthetisch und mit festem Zufalls-Seed. Die Demo fragt: **Welche Leitungen fehlen, damit kein einzelner Ausfall das Netz trennt, und was kostet das?** Eine **Brücke** ist eine Leitung, deren Ausfall das Netz zerlegt; ein Netz ohne Brücke ist **2-Kanten-zusammenhängend**. Zwei Aufgaben: **Verstärken** (ein vorhandenes Netz mit möglichst wenigen neuen Leitungen brückenfrei machen: die Blätter des Brückenbaums paarweise verbinden) und **Entwerfen** (aus Kandidatenleitungen mit Kosten die billigste brückenfreie Auswahl treffen; NP-schwer) mit einem **linearen Programm mit nachgeladenen Schnittbedingungen**, **iterativem Runden** (Garantie 2) und der **exakten** Lösung als Maßstab. Ein dritter Tab zählt **Doppelausfälle**: Leitungspaare, deren gemeinsamer Ausfall das Netz trennt.
 
