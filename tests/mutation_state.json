@@ -1,0 +1,8 @@
+{
+ "zvs_algorithm.py|schleife|range(n) -> range(n - 1)|2de22cd8#0": "equivalent",
+ "zvs_algorithm.py|vergleich|< -> <=|e57f4345#0": "equivalent",
+ "zvs_algorithm.py|vergleich|> -> >=|10ac2857#0": "equivalent",
+ "zvs_algorithm.py|vergleich|>= -> >|4519aa1e#0": "equivalent",
+ "zvs_evaluation.py|rechnung|- -> +|7e15879d#0": "equivalent",
+ "zvs_evaluation.py|vergleich|< -> <=|fbc75347#0": "equivalent"
+}
